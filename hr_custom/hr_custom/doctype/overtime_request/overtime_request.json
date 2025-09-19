@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "EMP_OT_.MM._.####",
+ "creation": "2025-09-11 22:11:13.970935",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overtime_request_section",
+  "column_break_ykqj",
+  "employee",
+  "employee_name",
+  "department",
+  "designation",
+  "status",
+  "amended_from",
+  "column_break_ayro",
+  "start_datetime",
+  "end_datetime",
+  "total_hours",
+  "column_break_qaef",
+  "normal_work",
+  "holiday",
+  "total_normal_work_hours",
+  "total_holiday_hours",
+  "normal_hours_limit",
+  "holiday_hours_limit"
+ ],
+ "fields": [
+  {
+   "fieldname": "overtime_request_section",
+   "fieldtype": "Section Break",
+   "label": "Overtime Request"
+  },
+  {
+   "fieldname": "column_break_ykqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fetch_if_empty": 1,
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nRequested\nRejected"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Overtime Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ayro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start DateTime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End DateTime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Hours"
+  },
+  {
+   "fieldname": "column_break_qaef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal_work",
+   "fieldtype": "Check",
+   "label": "Normal Work"
+  },
+  {
+   "default": "0",
+   "fieldname": "holiday",
+   "fieldtype": "Check",
+   "label": "Holiday"
+  },
+  {
+   "fieldname": "total_normal_work_hours",
+   "fieldtype": "Float",
+   "label": "Total Normal Work Hours"
+  },
+  {
+   "fieldname": "total_holiday_hours",
+   "fieldtype": "Float",
+   "label": "Total Holiday Hours"
+  },
+  {
+   "fieldname": "normal_hours_limit",
+   "fieldtype": "Float",
+   "label": "Normal Hours Limit"
+  },
+  {
+   "fieldname": "holiday_hours_limit",
+   "fieldtype": "Float",
+   "label": "Holiday Hours Limit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-18 03:52:45.109891",
+ "modified_by": "Administrator",
+ "module": "HR_Custom",
+ "name": "Overtime Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "translated_doctype": 1
+}

@@ -4,6 +4,10 @@ app_publisher = "Bassam"
 app_description = "HR Manange and payroll for employees"
 app_email = "qaidbassam@gmail.com"
 app_license = "mit"
+
+fixtures = ["Custom Field"]
+
+
 # required_apps = []
 
 # Includes in <head>
